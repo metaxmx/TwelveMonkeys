@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet.fileupload;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * This interface represents an HTTP file upload request, as specified by

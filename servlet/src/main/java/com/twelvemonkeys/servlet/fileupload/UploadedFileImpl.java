@@ -30,8 +30,7 @@
 
 package com.twelvemonkeys.servlet.fileupload;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
+import jakarta.servlet.http.Part;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,9 +44,9 @@ import java.io.InputStream;
  * @version $Id: UploadedFileImpl.java#1 $
  */
 class UploadedFileImpl implements UploadedFile {
-    private final FileItem item;
+    private final Part item;
 
-    public UploadedFileImpl(FileItem pItem) {
+    public UploadedFileImpl(Part pItem) {
         if (pItem == null) {
             throw new IllegalArgumentException("fileitem == null");
         }
@@ -73,17 +72,13 @@ class UploadedFileImpl implements UploadedFile {
 
     public void writeTo(File pFile) throws IOException {
         try {
-            item.write(pFile);
+            item.write(pFile.getAbsolutePath());
         }
         catch(RuntimeException e) {
             throw e;
         }
         catch (IOException e) {
             throw e;
-        }
-        catch (FileUploadException e) {
-            // We deliberately change this exception to an IOException, as it really is
-            throw (IOException) new IOException(e.getMessage()).initCause(e);
         }
         catch (Exception e) {
             // Should not really happen, ever

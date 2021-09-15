@@ -31,9 +31,10 @@
 package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.lang.ObjectAbstractTest;
+import jakarta.servlet.descriptor.JspConfigDescriptor;
 import org.junit.Test;
 
-import javax.servlet.*;
+import jakarta.servlet.*;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -272,6 +273,181 @@ public abstract class FilterAbstractTest extends ObjectAbstractTest {
             public void setAttribute(String s, Object obj) {
                 attributes.put(s, obj);
             }
+
+            @Override
+            public String getContextPath() {
+                return null;
+            }
+
+            @Override
+            public int getEffectiveMajorVersion() {
+                return 0;
+            }
+
+            @Override
+            public int getEffectiveMinorVersion() {
+                return 0;
+            }
+
+            @Override
+            public boolean setInitParameter(String name, String value) {
+                return false;
+            }
+
+            @Override
+            public ServletRegistration.Dynamic addServlet(String servletName, String className) {
+                return null;
+            }
+
+            @Override
+            public ServletRegistration.Dynamic addServlet(String servletName, Servlet servlet) {
+                return null;
+            }
+
+            @Override
+            public ServletRegistration.Dynamic addServlet(String servletName, Class<? extends Servlet> servletClass) {
+                return null;
+            }
+
+            @Override
+            public ServletRegistration.Dynamic addJspFile(String servletName, String jspFile) {
+                return null;
+            }
+
+            @Override
+            public <T extends Servlet> T createServlet(Class<T> clazz) throws ServletException {
+                return null;
+            }
+
+            @Override
+            public ServletRegistration getServletRegistration(String servletName) {
+                return null;
+            }
+
+            @Override
+            public Map<String, ? extends ServletRegistration> getServletRegistrations() {
+                return null;
+            }
+
+            @Override
+            public FilterRegistration.Dynamic addFilter(String filterName, String className) {
+                return null;
+            }
+
+            @Override
+            public FilterRegistration.Dynamic addFilter(String filterName, Filter filter) {
+                return null;
+            }
+
+            @Override
+            public FilterRegistration.Dynamic addFilter(String filterName, Class<? extends Filter> filterClass) {
+                return null;
+            }
+
+            @Override
+            public <T extends Filter> T createFilter(Class<T> clazz) throws ServletException {
+                return null;
+            }
+
+            @Override
+            public FilterRegistration getFilterRegistration(String filterName) {
+                return null;
+            }
+
+            @Override
+            public Map<String, ? extends FilterRegistration> getFilterRegistrations() {
+                return null;
+            }
+
+            @Override
+            public SessionCookieConfig getSessionCookieConfig() {
+                return null;
+            }
+
+            @Override
+            public void setSessionTrackingModes(Set<SessionTrackingMode> sessionTrackingModes) {
+
+            }
+
+            @Override
+            public Set<SessionTrackingMode> getDefaultSessionTrackingModes() {
+                return null;
+            }
+
+            @Override
+            public Set<SessionTrackingMode> getEffectiveSessionTrackingModes() {
+                return null;
+            }
+
+            @Override
+            public void addListener(String className) {
+
+            }
+
+            @Override
+            public <T extends EventListener> void addListener(T t) {
+
+            }
+
+            @Override
+            public void addListener(Class<? extends EventListener> listenerClass) {
+
+            }
+
+            @Override
+            public <T extends EventListener> T createListener(Class<T> clazz) throws ServletException {
+                return null;
+            }
+
+            @Override
+            public JspConfigDescriptor getJspConfigDescriptor() {
+                return null;
+            }
+
+            @Override
+            public ClassLoader getClassLoader() {
+                return null;
+            }
+
+            @Override
+            public void declareRoles(String... roleNames) {
+
+            }
+
+            @Override
+            public String getVirtualServerName() {
+                return null;
+            }
+
+            @Override
+            public int getSessionTimeout() {
+                return 0;
+            }
+
+            @Override
+            public void setSessionTimeout(int sessionTimeout) {
+
+            }
+
+            @Override
+            public String getRequestCharacterEncoding() {
+                return null;
+            }
+
+            @Override
+            public void setRequestCharacterEncoding(String encoding) {
+
+            }
+
+            @Override
+            public String getResponseCharacterEncoding() {
+                return null;
+            }
+
+            @Override
+            public void setResponseCharacterEncoding(String encoding) {
+
+            }
         }
     }
 
@@ -397,6 +573,46 @@ public abstract class FilterAbstractTest extends ObjectAbstractTest {
         public int getLocalPort() {
             throw new UnsupportedOperationException("Method getLocalPort not implemented");// TODO: Implement
         }
+
+        @Override
+        public long getContentLengthLong() {
+            return 0;
+        }
+
+        @Override
+        public ServletContext getServletContext() {
+            return null;
+        }
+
+        @Override
+        public AsyncContext startAsync() throws IllegalStateException {
+            return null;
+        }
+
+        @Override
+        public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
+            return null;
+        }
+
+        @Override
+        public boolean isAsyncStarted() {
+            return false;
+        }
+
+        @Override
+        public boolean isAsyncSupported() {
+            return false;
+        }
+
+        @Override
+        public AsyncContext getAsyncContext() {
+            return null;
+        }
+
+        @Override
+        public DispatcherType getDispatcherType() {
+            return null;
+        }
     }
 
     static class MockServletResponse implements ServletResponse {
@@ -457,6 +673,11 @@ public abstract class FilterAbstractTest extends ObjectAbstractTest {
         }
 
         public void setLocale(Locale pLocale) {
+            // TODO: Implement
+        }
+
+        @Override
+        public void setContentLengthLong(long len) {
             // TODO: Implement
         }
     }

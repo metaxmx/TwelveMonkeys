@@ -30,17 +30,16 @@
 
 package com.twelvemonkeys.servlet.fileupload;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUpload;
-import org.apache.commons.fileupload.FileUploadBase;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletRequestContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import jakarta.servlet.http.Part;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.File;
-import java.util.*;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * An {@code HttpFileUploadRequest} implementation, based on
@@ -57,37 +56,27 @@ class HttpFileUploadRequestWrapper extends HttpServletRequestWrapper implements 
     public HttpFileUploadRequestWrapper(HttpServletRequest pRequest, File pUploadDir, long pMaxSize) throws ServletException {
         super(pRequest);
 
-        DiskFileItemFactory factory = new DiskFileItemFactory(
-                128 * 1024, // 128 KByte
-                new File(pUploadDir.getAbsolutePath())
-        );
-        FileUpload upload = new FileUpload(factory);
-        upload.setSizeMax(pMaxSize);
-
         // TODO: Defer request parsing??
         try {
+
             //noinspection unchecked
-            List<FileItem> items = upload.parseRequest(new ServletRequestContext(pRequest));
-            for (FileItem item : items) {
-                if (item.isFormField()) {
-                    processFormField(item.getFieldName(), item.getString());
-                }
-                else {
-                    processeFile(item);
+            for (Part item : pRequest.getParts()) {
+                processeFile(item);
+            }
+            for (Map.Entry<String, String[]> parameter : pRequest.getParameterMap().entrySet()) {
+                for (String value : parameter.getValue()) {
+                    processFormField(parameter.getKey(), value);
                 }
             }
         }
-        catch (FileUploadBase.SizeLimitExceededException e) {
-            throw new FileSizeExceededException(e);
-        }
-        catch (org.apache.commons.fileupload.FileUploadException e) {
+        catch (java.io.IOException e) {
             throw new FileUploadException(e);
         }
     }
 
-    private void processeFile(final FileItem pItem) {
+    private void processeFile(final Part pItem) {
         UploadedFile value = new UploadedFileImpl(pItem);
-        String name = pItem.getFieldName();
+        String name = pItem.getName();
 
         UploadedFile[] values;
         UploadedFile[] oldValues = files.get(name);

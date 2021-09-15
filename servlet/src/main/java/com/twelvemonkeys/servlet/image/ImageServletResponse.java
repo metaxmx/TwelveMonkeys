@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet.image;
 
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletResponse;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;

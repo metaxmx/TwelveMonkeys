@@ -16,7 +16,7 @@ package com.twelvemonkeys.servlet.jsp.taglib;
 import java.io.*;
 import java.net.*;
 
-import javax.servlet.jsp.*;
+import jakarta.servlet.jsp.*;
 import javax.xml.transform.*;
 import javax.xml.transform.stream.*;
 

@@ -33,11 +33,11 @@ package com.twelvemonkeys.servlet;
 import com.twelvemonkeys.io.FileUtil;
 import com.twelvemonkeys.lang.StringUtil;
 
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -138,7 +138,7 @@ public class ProxyServlet extends GenericServlet {
      * @throws ServletException
      * @throws IOException
      *
-     * @see #service(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     * @see #service(jakarta.servlet.http.HttpServletRequest, jakarta.servlet.http.HttpServletResponse)
      */
     public final void service(ServletRequest pRequest, ServletResponse pResponse) throws ServletException, IOException {
         service((HttpServletRequest) pRequest, (HttpServletResponse) pResponse);

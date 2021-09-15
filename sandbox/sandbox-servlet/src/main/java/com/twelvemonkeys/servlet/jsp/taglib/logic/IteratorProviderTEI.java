@@ -1,6 +1,6 @@
 package com.twelvemonkeys.servlet.jsp.taglib.logic;
 
-import javax.servlet.jsp.tagext.*;
+import jakarta.servlet.jsp.tagext.*;
 
 /**
  * TagExtraInfo class for IteratorProvider tags.

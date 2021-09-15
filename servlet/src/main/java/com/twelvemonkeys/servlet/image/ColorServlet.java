@@ -32,10 +32,10 @@ package com.twelvemonkeys.servlet.image;
 
 import com.twelvemonkeys.servlet.GenericServlet;
 
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.util.zip.CRC32;
 

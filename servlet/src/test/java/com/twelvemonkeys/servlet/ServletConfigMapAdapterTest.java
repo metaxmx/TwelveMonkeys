@@ -31,10 +31,11 @@
 package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.util.MapAbstractTest;
+import jakarta.servlet.descriptor.JspConfigDescriptor;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import javax.servlet.*;
+import jakarta.servlet.*;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.net.MalformedURLException;
@@ -89,6 +90,31 @@ abstract class AbstractServletConfigMapAdapterTest extends MapAbstractTest {
 
         public ServletContext getServletContext() {
             throw new UnsupportedOperationException("Method getSerlvetContext not implemented");
+        }
+
+        @Override
+        public String getContextPath() {
+            throw new UnsupportedOperationException("Method getContextPath not implemented");
+        }
+
+        @Override
+        public int getEffectiveMajorVersion() {
+            throw new UnsupportedOperationException("Method getEffectiveMajorVersion not implemented");
+        }
+
+        @Override
+        public int getEffectiveMinorVersion() {
+            throw new UnsupportedOperationException("Method getEffectiveMinorVersion not implemented");
+        }
+
+        @Override
+        public ServletRegistration.Dynamic addServlet(String servletName, Servlet servlet) {
+            throw new UnsupportedOperationException("Method addServlet not implemented");
+        }
+
+        @Override
+        public boolean setInitParameter(String name, String value) {
+            throw new UnsupportedOperationException("Method setInitParameter not implemented");
         }
 
         public String getInitParameter(String s) {
@@ -182,6 +208,156 @@ abstract class AbstractServletConfigMapAdapterTest extends MapAbstractTest {
 
         public void removeAttribute(String name) {
             throw new UnsupportedOperationException("Method removeAttribute not implemented");
+        }
+
+        @Override
+        public ServletRegistration.Dynamic addServlet(String servletName, String className) {
+            throw new UnsupportedOperationException("Method addServlet not implemented");
+        }
+
+        @Override
+        public ServletRegistration.Dynamic addServlet(String servletName, Class<? extends Servlet> servletClass) {
+            throw new UnsupportedOperationException("Method addServlet not implemented");
+        }
+
+        @Override
+        public ServletRegistration.Dynamic addJspFile(String servletName, String jspFile) {
+            throw new UnsupportedOperationException("Method addJspFile not implemented");
+        }
+
+        @Override
+        public <T extends Servlet> T createServlet(Class<T> clazz) throws ServletException {
+            throw new UnsupportedOperationException("Method createServlet not implemented");
+        }
+
+        @Override
+        public ServletRegistration getServletRegistration(String servletName) {
+            throw new UnsupportedOperationException("Method getServletRegistration not implemented");
+        }
+
+        @Override
+        public Map<String, ? extends ServletRegistration> getServletRegistrations() {
+            throw new UnsupportedOperationException("Method getServletRegistrations not implemented");
+        }
+
+        @Override
+        public FilterRegistration.Dynamic addFilter(String filterName, String className) {
+            throw new UnsupportedOperationException("Method addFilter not implemented");
+        }
+
+        @Override
+        public FilterRegistration.Dynamic addFilter(String filterName, Filter filter) {
+            throw new UnsupportedOperationException("Method addFilter not implemented");
+        }
+
+        @Override
+        public FilterRegistration.Dynamic addFilter(String filterName, Class<? extends Filter> filterClass) {
+            throw new UnsupportedOperationException("Method addFilter not implemented");
+        }
+
+        @Override
+        public <T extends Filter> T createFilter(Class<T> clazz) throws ServletException {
+            throw new UnsupportedOperationException("Method createFilter not implemented");
+        }
+
+        @Override
+        public FilterRegistration getFilterRegistration(String filterName) {
+            throw new UnsupportedOperationException("Method getFilterRegistration not implemented");
+        }
+
+        @Override
+        public Map<String, ? extends FilterRegistration> getFilterRegistrations() {
+            throw new UnsupportedOperationException("Method getFilterRegistrations not implemented");
+        }
+
+        @Override
+        public SessionCookieConfig getSessionCookieConfig() {
+            throw new UnsupportedOperationException("Method getSessionCookieConfig not implemented");
+        }
+
+        @Override
+        public void setSessionTrackingModes(Set<SessionTrackingMode> sessionTrackingModes) {
+            throw new UnsupportedOperationException("Method setSessionTrackingModes not implemented");
+        }
+
+        @Override
+        public Set<SessionTrackingMode> getDefaultSessionTrackingModes() {
+            throw new UnsupportedOperationException("Method getDefaultSessionTrackingModes not implemented");
+        }
+
+        @Override
+        public Set<SessionTrackingMode> getEffectiveSessionTrackingModes() {
+            throw new UnsupportedOperationException("Method getEffectiveSessionTrackingModes not implemented");
+        }
+
+        @Override
+        public void addListener(String className) {
+            throw new UnsupportedOperationException("Method addListener not implemented");
+        }
+
+        @Override
+        public <T extends EventListener> void addListener(T t) {
+            throw new UnsupportedOperationException("Method addListener not implemented");
+        }
+
+        @Override
+        public void addListener(Class<? extends EventListener> listenerClass) {
+            throw new UnsupportedOperationException("Method addListener not implemented");
+        }
+
+        @Override
+        public <T extends EventListener> T createListener(Class<T> clazz) throws ServletException {
+            throw new UnsupportedOperationException("Method createListener not implemented");
+        }
+
+        @Override
+        public JspConfigDescriptor getJspConfigDescriptor() {
+            throw new UnsupportedOperationException("Method getJspConfigDescriptor not implemented");
+        }
+
+        @Override
+        public ClassLoader getClassLoader() {
+            throw new UnsupportedOperationException("Method getClassLoader not implemented");
+        }
+
+        @Override
+        public void declareRoles(String... roleNames) {
+            throw new UnsupportedOperationException("Method declareRoles not implemented");
+        }
+
+        @Override
+        public String getVirtualServerName() {
+            throw new UnsupportedOperationException("Method getVirtualServerName not implemented");
+        }
+
+        @Override
+        public int getSessionTimeout() {
+            throw new UnsupportedOperationException("Method getSessionTimeout not implemented");
+        }
+
+        @Override
+        public void setSessionTimeout(int sessionTimeout) {
+            throw new UnsupportedOperationException("Method getSessionTimeout not implemented");
+        }
+
+        @Override
+        public String getRequestCharacterEncoding() {
+            throw new UnsupportedOperationException("Method getRequestCharacterEncoding not implemented");
+        }
+
+        @Override
+        public void setRequestCharacterEncoding(String encoding) {
+            throw new UnsupportedOperationException("Method setRequestCharacterEncoding not implemented");
+        }
+
+        @Override
+        public String getResponseCharacterEncoding() {
+            throw new UnsupportedOperationException("Method getResponseCharacterEncoding not implemented");
+        }
+
+        @Override
+        public void setResponseCharacterEncoding(String encoding) {
+            throw new UnsupportedOperationException("Method setResponseCharacterEncoding not implemented");
         }
     }
 

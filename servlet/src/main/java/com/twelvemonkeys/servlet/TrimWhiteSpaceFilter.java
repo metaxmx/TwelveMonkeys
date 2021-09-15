@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet;
 
-import javax.servlet.*;
+import jakarta.servlet.*;
 import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;

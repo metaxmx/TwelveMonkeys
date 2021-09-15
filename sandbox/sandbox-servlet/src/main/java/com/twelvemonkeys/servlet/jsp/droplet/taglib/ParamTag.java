@@ -17,7 +17,7 @@ package com.twelvemonkeys.servlet.jsp.droplet.taglib;
 import com.twelvemonkeys.servlet.jsp.droplet.Param;
 import com.twelvemonkeys.servlet.jsp.taglib.ExTagSupport;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * Parameter tag that emulates ATG Dynamo JHTML behaviour for JSP.

@@ -40,9 +40,9 @@ import java.lang.annotation.*;
  * @author last modified by $Author: haku $
  * @version $Id: InitParam.java#1 $
  * @see com.twelvemonkeys.servlet.ServletConfigurator
- * @see com.twelvemonkeys.servlet.GenericFilter#init(javax.servlet.FilterConfig)
- * @see com.twelvemonkeys.servlet.GenericServlet#init(javax.servlet.ServletConfig)
- * @see com.twelvemonkeys.servlet.HttpServlet#init(javax.servlet.ServletConfig)
+ * @see com.twelvemonkeys.servlet.GenericFilter#init(jakarta.servlet.FilterConfig)
+ * @see com.twelvemonkeys.servlet.GenericServlet#init(jakarta.servlet.ServletConfig)
+ * @see com.twelvemonkeys.servlet.HttpServlet#init(jakarta.servlet.ServletConfig)
  */
 // TODO: Actually implement for version 3.0!
 @Documented

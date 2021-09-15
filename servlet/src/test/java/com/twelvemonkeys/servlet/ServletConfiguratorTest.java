@@ -33,10 +33,10 @@ package com.twelvemonkeys.servlet;
 import org.junit.Test;
 import org.mockito.Matchers;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterConfig;
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletConfig;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -303,7 +303,7 @@ public class ServletConfiguratorTest {
 
         ServletConfig config = mock(ServletConfig.class);
         when(config.getServletName()).thenReturn("FooServlet");
-        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<Object>emptyList()));
+        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<String>emptyList()));
 
         ServletConfigurator.configure(servlet, config);
 
@@ -323,7 +323,7 @@ public class ServletConfiguratorTest {
 
         ServletConfig config = mock(ServletConfig.class);
         when(config.getServletName()).thenReturn("FooServlet");
-        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<Object>emptyList()));
+        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<String>emptyList()));
 
         ServletConfigurator.configure(servlet, config); // Should throw exception
     }
@@ -339,7 +339,7 @@ public class ServletConfiguratorTest {
 
         ServletConfig config = mock(ServletConfig.class);
         when(config.getServletName()).thenReturn("FooServlet");
-        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<Object>emptyList()));
+        when(config.getInitParameterNames()).thenReturn(Collections.enumeration(Collections.<String>emptyList()));
 
         ServletConfigurator.configure(servlet, config);
 

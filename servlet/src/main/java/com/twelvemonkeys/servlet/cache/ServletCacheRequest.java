@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet.cache;
 
 import com.twelvemonkeys.servlet.ServletUtil;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;

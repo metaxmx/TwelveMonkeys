@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet.image;
 
 import com.twelvemonkeys.servlet.ServletUtil;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;

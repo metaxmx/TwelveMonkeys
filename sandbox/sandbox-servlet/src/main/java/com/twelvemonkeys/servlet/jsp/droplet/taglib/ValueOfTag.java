@@ -17,10 +17,10 @@ package com.twelvemonkeys.servlet.jsp.droplet.taglib;
 import com.twelvemonkeys.servlet.jsp.droplet.JspFragment;
 import com.twelvemonkeys.servlet.jsp.taglib.ExTagSupport;
 
-import javax.servlet.ServletException;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.PageContext;
 import java.io.IOException;
 
 /**

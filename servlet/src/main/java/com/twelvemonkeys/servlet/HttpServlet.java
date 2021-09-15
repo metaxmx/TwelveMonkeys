@@ -32,8 +32,8 @@ package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.lang.BeanUtil;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
 import java.lang.reflect.InvocationTargetException;
 
 /**
@@ -52,7 +52,7 @@ import java.lang.reflect.InvocationTargetException;
  * 
  * @version $Id: HttpServlet.java#1 $
  */
-public abstract class HttpServlet extends javax.servlet.http.HttpServlet {
+public abstract class HttpServlet extends jakarta.servlet.http.HttpServlet {
     // TODO: Rewrite to use ServletConfigurator instead of BeanUtil
 
     /**
@@ -71,7 +71,7 @@ public abstract class HttpServlet extends javax.servlet.http.HttpServlet {
      * @param pConfig the servlet config
      * @throws ServletException if an error occurred during init
      *
-     * @see javax.servlet.GenericServlet#init
+     * @see jakarta.servlet.GenericServlet#init
      * @see #init() init
      * @see BeanUtil#configure(Object, java.util.Map, boolean)
      */

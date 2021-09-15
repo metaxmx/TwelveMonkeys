@@ -32,17 +32,17 @@ package com.twelvemonkeys.servlet.image;
 
 import com.twelvemonkeys.servlet.ServletUtil;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 
 /**
- * A {@link javax.servlet.Filter} that extracts request parameters, and sets the
+ * A {@link jakarta.servlet.Filter} that extracts request parameters, and sets the
  * corresponding request attributes from {@link ImageServletResponse}.
  * Only affects how the image is decoded, and must be applied before any
  * other image filters in the chain.
