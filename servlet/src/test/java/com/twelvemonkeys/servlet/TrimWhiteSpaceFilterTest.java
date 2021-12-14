@@ -3,8 +3,8 @@ package com.twelvemonkeys.servlet;
 import com.twelvemonkeys.io.OutputStreamAbstractTest;
 import org.junit.Test;
 
-import javax.servlet.Filter;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.ServletResponse;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;

@@ -10,8 +10,8 @@ package com.twelvemonkeys.servlet.jsp.taglib.logic;
 
 import com.twelvemonkeys.lang.StringUtil;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.jsp.JspException;
 
 
 /**
@@ -20,7 +20,7 @@ import javax.servlet.jsp.JspException;
  * The attribute types supported so far is:
  * <ul>
  *  <li>{@code java.lang.String} (ver. 1.0)
- *  <li>{@code javax.servlet.http.Cookie} (ver. 1.0)
+ *  <li>{@code jakarta.servlet.http.Cookie} (ver. 1.0)
  * </ul>
  * </p>
  * See the implemented <a href="#condition">{@code condition}</a> method for details regarding the non-equality conditions.
@@ -120,7 +120,7 @@ public class NotEqualTag extends ConditionalTagBase {
      *  <li>The attribute must be an instance of one of the supported classes:
      *      <ul>
      *          <li>{@code java.lang.String}
-     *          <li>{@code javax.servlet.http.Cookie}
+     *          <li>{@code jakarta.servlet.http.Cookie}
      *      </ul>
      *  <li>The value of the attribute must NOT be equal to the object value property ({@code value} -> {@code mObjectValue}).
      * </ol>

@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet;
 
 import org.junit.Test;
 
-import javax.servlet.*;
+import jakarta.servlet.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;

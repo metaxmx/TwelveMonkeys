@@ -15,10 +15,10 @@
 package com.twelvemonkeys.servlet.jsp.taglib;
 
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspWriter;
-import javax.servlet.jsp.tagext.Tag;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.tagext.Tag;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;

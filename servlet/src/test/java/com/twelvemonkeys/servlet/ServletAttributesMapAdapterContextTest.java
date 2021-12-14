@@ -34,7 +34,7 @@ import com.twelvemonkeys.util.MapAbstractTest;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 

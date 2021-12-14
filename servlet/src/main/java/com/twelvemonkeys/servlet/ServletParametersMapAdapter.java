@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.util.CollectionUtil;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Iterator;

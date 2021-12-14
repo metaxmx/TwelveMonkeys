@@ -30,8 +30,8 @@
 
 package com.twelvemonkeys.servlet;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
 import java.util.Enumeration;
 import java.util.Iterator;
 

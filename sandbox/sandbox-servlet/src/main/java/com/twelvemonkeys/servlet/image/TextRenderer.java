@@ -31,8 +31,8 @@ package com.twelvemonkeys.servlet.image;
 import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.servlet.ServletUtil;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 

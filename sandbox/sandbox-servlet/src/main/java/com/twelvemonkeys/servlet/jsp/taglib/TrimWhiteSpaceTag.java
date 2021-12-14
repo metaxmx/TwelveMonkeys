@@ -2,7 +2,7 @@ package com.twelvemonkeys.servlet.jsp.taglib;
 
 import java.io.IOException;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  * This tag truncates all consecutive whitespace in sequence inside its body,

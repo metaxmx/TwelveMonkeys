@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet.image;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 /**
  * This exception is a subclass of ServletException, and acts just as a marker

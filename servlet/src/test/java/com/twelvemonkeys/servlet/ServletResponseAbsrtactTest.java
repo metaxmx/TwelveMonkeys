@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.lang.ObjectAbstractTest;
 
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletResponse;
 
 /**
  * ServletResponseAbsrtactTestCase

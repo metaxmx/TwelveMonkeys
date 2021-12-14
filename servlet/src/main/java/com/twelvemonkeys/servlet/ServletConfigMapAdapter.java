@@ -33,9 +33,9 @@ package com.twelvemonkeys.servlet;
 import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.lang.Validate;
 
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import java.io.Serializable;
 import java.util.*;
 

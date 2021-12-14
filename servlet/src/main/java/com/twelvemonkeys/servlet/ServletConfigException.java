@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 /**
  * ServletConfigException.

@@ -1,6 +1,6 @@
 package com.twelvemonkeys.servlet.jsp.taglib;
 
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspException;
 
 /**
  *

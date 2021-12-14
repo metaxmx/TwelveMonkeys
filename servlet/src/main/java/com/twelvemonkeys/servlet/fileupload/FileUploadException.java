@@ -30,7 +30,7 @@
 
 package com.twelvemonkeys.servlet.fileupload;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 /**
  * FileUploadException

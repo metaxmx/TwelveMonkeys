@@ -25,8 +25,8 @@ import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.servlet.jsp.droplet.Oparam;
 import com.twelvemonkeys.servlet.jsp.taglib.BodyReaderTag;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.jsp.JspException;
 import java.io.File;
 import java.io.IOException;
 
@@ -195,7 +195,7 @@ public class OparamTag extends BodyReaderTag {
         int count = getOparamCountFromRequest(pRequest);
 
         // Hmm.. Would be great, but seems like I can't serve pages from within the temp dir
-        //File temp = (File) getServletContext().getAttribute("javax.servlet.context.tempdir");
+        //File temp = (File) getServletContext().getAttribute("jakarta.servlet.context.tempdir");
         //return new File(new File(temp, path), name + "_oparam_" + count + "_" + param + ".jsp");
 
         return new File(new File(pageContext.getServletContext().getRealPath(path)), name + "_oparam_" + count + "_" + param + ".jsp");

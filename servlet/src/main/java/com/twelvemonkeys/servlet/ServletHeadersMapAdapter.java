@@ -32,7 +32,7 @@ package com.twelvemonkeys.servlet;
 
 import com.twelvemonkeys.util.CollectionUtil;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.*;
 
 import static com.twelvemonkeys.lang.Validate.notNull;

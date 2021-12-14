@@ -35,10 +35,10 @@ import com.twelvemonkeys.util.FilterIterator;
 import com.twelvemonkeys.util.convert.ConversionException;
 import com.twelvemonkeys.util.convert.Converter;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterConfig;
-import javax.servlet.Servlet;
-import javax.servlet.ServletConfig;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletConfig;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

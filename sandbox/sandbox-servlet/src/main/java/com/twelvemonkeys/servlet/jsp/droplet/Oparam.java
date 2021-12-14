@@ -1,7 +1,7 @@
 package com.twelvemonkeys.servlet.jsp.droplet;
 
-import javax.servlet.ServletException;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.jsp.PageContext;
 import java.io.IOException;
 
 /**
