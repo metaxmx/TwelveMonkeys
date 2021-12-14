@@ -35,14 +35,14 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.servlet.GenericFilter;
@@ -72,7 +72,7 @@ public class CacheFilter extends GenericFilter {
     /**
      * Initializes the filter
      *
-     * @throws javax.servlet.ServletException
+     * @throws jakarta.servlet.ServletException
      */
     public void init() throws ServletException {
         FilterConfig config = getFilterConfig();
@@ -139,9 +139,9 @@ public class CacheFilter extends GenericFilter {
     }
 
     private File getTempFolder() {
-        File tempRoot = (File) getServletContext().getAttribute("javax.servlet.context.tempdir");
+        File tempRoot = (File) getServletContext().getAttribute("jakarta.servlet.context.tempdir");
         if (tempRoot == null) {
-            throw new IllegalStateException("Missing context attribute \"javax.servlet.context.tempdir\"");
+            throw new IllegalStateException("Missing context attribute \"jakarta.servlet.context.tempdir\"");
         }
         return new File(tempRoot, getFilterName());
     }

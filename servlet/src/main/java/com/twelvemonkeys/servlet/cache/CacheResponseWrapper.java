@@ -34,8 +34,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponseWrapper;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletResponseWrapper;
 
 import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.net.HTTPUtil;

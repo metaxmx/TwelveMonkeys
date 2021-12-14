@@ -184,7 +184,7 @@ public class HTTPCacheTest {
     public void testCreateServletContext() throws IOException {
         ServletContext mockContext = mock(ServletContext.class);
         // Currently context is used for tempdir and logging
-        when(mockContext.getAttribute(eq("javax.servlet.context.tempdir"))).thenReturn(createTempRoot());
+        when(mockContext.getAttribute(eq("jakarta.servlet.context.tempdir"))).thenReturn(createTempRoot());
         
         new HTTPCache("cache", mockContext, 500, 0, 10, true);
     }

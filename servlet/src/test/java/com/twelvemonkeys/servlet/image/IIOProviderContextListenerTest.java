@@ -40,9 +40,9 @@ import java.util.Locale;
 import javax.imageio.ImageReader;
 import javax.imageio.spi.IIORegistry;
 import javax.imageio.spi.ImageReaderSpi;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 import org.junit.Test;
 

@@ -36,7 +36,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 
 import com.twelvemonkeys.image.ImageUtil;
 import com.twelvemonkeys.lang.StringUtil;

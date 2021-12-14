@@ -40,16 +40,16 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletRequestWrapper;
-import javax.servlet.ServletResponse;
-import javax.servlet.ServletResponseWrapper;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletRequestWrapper;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.ServletResponseWrapper;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import com.twelvemonkeys.lang.StringUtil;
 import com.twelvemonkeys.util.convert.ConversionException;
@@ -68,54 +68,54 @@ import com.twelvemonkeys.util.convert.Converter;
 public final class ServletUtil {
 
     /**
-     * {@code "javax.servlet.include.request_uri"}
+     * {@code "jakarta.servlet.include.request_uri"}
      */
-    private final static String ATTRIB_INC_REQUEST_URI = "javax.servlet.include.request_uri";
+    private final static String ATTRIB_INC_REQUEST_URI = "jakarta.servlet.include.request_uri";
 
     /**
-     * {@code "javax.servlet.include.context_path"}
+     * {@code "jakarta.servlet.include.context_path"}
      */
-    private final static String ATTRIB_INC_CONTEXT_PATH = "javax.servlet.include.context_path";
+    private final static String ATTRIB_INC_CONTEXT_PATH = "jakarta.servlet.include.context_path";
 
     /**
-     * {@code "javax.servlet.include.servlet_path"}
+     * {@code "jakarta.servlet.include.servlet_path"}
      */
-    private final static String ATTRIB_INC_SERVLET_PATH = "javax.servlet.include.servlet_path";
+    private final static String ATTRIB_INC_SERVLET_PATH = "jakarta.servlet.include.servlet_path";
 
     /**
-     * {@code "javax.servlet.include.path_info"}
+     * {@code "jakarta.servlet.include.path_info"}
      */
-    private final static String ATTRIB_INC_PATH_INFO = "javax.servlet.include.path_info";
+    private final static String ATTRIB_INC_PATH_INFO = "jakarta.servlet.include.path_info";
 
     /**
-     * {@code "javax.servlet.include.query_string"}
+     * {@code "jakarta.servlet.include.query_string"}
      */
-    private final static String ATTRIB_INC_QUERY_STRING = "javax.servlet.include.query_string";
+    private final static String ATTRIB_INC_QUERY_STRING = "jakarta.servlet.include.query_string";
 
     /**
-     * {@code "javax.servlet.forward.request_uri"}
+     * {@code "jakarta.servlet.forward.request_uri"}
      */
-    private final static String ATTRIB_FWD_REQUEST_URI = "javax.servlet.forward.request_uri";
+    private final static String ATTRIB_FWD_REQUEST_URI = "jakarta.servlet.forward.request_uri";
 
     /**
-     * {@code "javax.servlet.forward.context_path"}
+     * {@code "jakarta.servlet.forward.context_path"}
      */
-    private final static String ATTRIB_FWD_CONTEXT_PATH = "javax.servlet.forward.context_path";
+    private final static String ATTRIB_FWD_CONTEXT_PATH = "jakarta.servlet.forward.context_path";
 
     /**
-     * {@code "javax.servlet.forward.servlet_path"}
+     * {@code "jakarta.servlet.forward.servlet_path"}
      */
-    private final static String ATTRIB_FWD_SERVLET_PATH = "javax.servlet.forward.servlet_path";
+    private final static String ATTRIB_FWD_SERVLET_PATH = "jakarta.servlet.forward.servlet_path";
 
     /**
-     * {@code "javax.servlet.forward.path_info"}
+     * {@code "jakarta.servlet.forward.path_info"}
      */
-    private final static String ATTRIB_FWD_PATH_INFO = "javax.servlet.forward.path_info";
+    private final static String ATTRIB_FWD_PATH_INFO = "jakarta.servlet.forward.path_info";
 
     /**
-     * {@code "javax.servlet.forward.query_string"}
+     * {@code "jakarta.servlet.forward.query_string"}
      */
-    private final static String ATTRIB_FWD_QUERY_STRING = "javax.servlet.forward.query_string";
+    private final static String ATTRIB_FWD_QUERY_STRING = "jakarta.servlet.forward.query_string";
 
     /**
      * Don't create, static methods only
@@ -338,11 +338,11 @@ public final class ServletUtil {
 
     /**
      * Builds a full-blown HTTP/HTTPS URL from a
-     * {@code javax.servlet.http.HttpServletRequest} object.
+     * {@code jakarta.servlet.http.HttpServletRequest} object.
      *
      * @param pRequest The HTTP servlet request object.
      * @return the reproduced URL
-     * @deprecated Use {@link javax.servlet.http.HttpServletRequest#getRequestURL()}
+     * @deprecated Use {@link jakarta.servlet.http.HttpServletRequest#getRequestURL()}
      *             instead.
      */
     @Deprecated
@@ -379,7 +379,7 @@ public final class ServletUtil {
     /**
      * Gets the URI of the resource currently included.
      * The value is read from the request attribute
-     * {@code "javax.servlet.include.request_uri"}
+     * {@code "jakarta.servlet.include.request_uri"}
      *
      * @param pRequest the servlet request
      * @return the URI of the included resource, or {@code null} if no include
@@ -393,7 +393,7 @@ public final class ServletUtil {
     /**
      * Gets the context path of the resource currently included.
      * The value is read from the request attribute
-     * {@code "javax.servlet.include.context_path"}
+     * {@code "jakarta.servlet.include.context_path"}
      *
      * @param pRequest the servlet request
      * @return the context path of the included resource, or {@code null} if no include
@@ -407,7 +407,7 @@ public final class ServletUtil {
     /**
      * Gets the servlet path of the resource currently included.
      * The value is read from the request attribute
-     * {@code "javax.servlet.include.servlet_path"}
+     * {@code "jakarta.servlet.include.servlet_path"}
      *
      * @param pRequest the servlet request
      * @return the servlet path of the included resource, or {@code null} if no include
@@ -421,7 +421,7 @@ public final class ServletUtil {
     /**
      * Gets the path info of the resource currently included.
      * The value is read from the request attribute
-     * {@code "javax.servlet.include.path_info"}
+     * {@code "jakarta.servlet.include.path_info"}
      *
      * @param pRequest the servlet request
      * @return the path info of the included resource, or {@code null} if no include
@@ -435,7 +435,7 @@ public final class ServletUtil {
     /**
      * Gets the query string of the resource currently included.
      * The value is read from the request attribute
-     * {@code "javax.servlet.include.query_string"}
+     * {@code "jakarta.servlet.include.query_string"}
      *
      * @param pRequest the servlet request
      * @return the query string of the included resource, or {@code null} if no include
@@ -449,7 +449,7 @@ public final class ServletUtil {
     /**
      * Gets the URI of the resource this request was forwarded from.
      * The value is read from the request attribute
-     * {@code "javax.servlet.forward.request_uri"}
+     * {@code "jakarta.servlet.forward.request_uri"}
      *
      * @param pRequest the servlet request
      * @return the URI of the resource, or {@code null} if not forwarded
@@ -463,7 +463,7 @@ public final class ServletUtil {
     /**
      * Gets the context path of the resource this request was forwarded from.
      * The value is read from the request attribute
-     * {@code "javax.servlet.forward.context_path"}
+     * {@code "jakarta.servlet.forward.context_path"}
      *
      * @param pRequest the servlet request
      * @return the context path of the resource, or {@code null} if not forwarded
@@ -477,7 +477,7 @@ public final class ServletUtil {
     /**
      * Gets the servlet path of the resource this request was forwarded from.
      * The value is read from the request attribute
-     * {@code "javax.servlet.forward.servlet_path"}
+     * {@code "jakarta.servlet.forward.servlet_path"}
      *
      * @param pRequest the servlet request
      * @return the servlet path of the resource, or {@code null} if not forwarded
@@ -491,7 +491,7 @@ public final class ServletUtil {
     /**
      * Gets the path info of the resource this request was forwarded from.
      * The value is read from the request attribute
-     * {@code "javax.servlet.forward.path_info"}
+     * {@code "jakarta.servlet.forward.path_info"}
      *
      * @param pRequest the servlet request
      * @return the path info of the resource, or {@code null} if not forwarded
@@ -505,7 +505,7 @@ public final class ServletUtil {
     /**
      * Gets the query string of the resource this request was forwarded from.
      * The value is read from the request attribute
-     * {@code "javax.servlet.forward.query_string"}
+     * {@code "jakarta.servlet.forward.query_string"}
      *
      * @param pRequest the servlet request
      * @return the query string of the resource, or {@code null} if not forwarded
@@ -521,7 +521,7 @@ public final class ServletUtil {
      *
      * @param pRequest The HTTP servlet request object.
      * @return the script name.
-     * @see javax.servlet.http.HttpServletRequest#getServletPath()
+     * @see jakarta.servlet.http.HttpServletRequest#getServletPath()
      */
     // TODO: Read the spec, seems to be a mismatch with the Servlet API...
     static String getScriptName(final HttpServletRequest pRequest) {
@@ -584,7 +584,7 @@ public final class ServletUtil {
      * @return the temp directory
      */
     public static File getTempDir(final ServletContext pContext) {
-        return (File) pContext.getAttribute("javax.servlet.context.tempdir");
+        return (File) pContext.getAttribute("jakarta.servlet.context.tempdir");
     }
 
     /**

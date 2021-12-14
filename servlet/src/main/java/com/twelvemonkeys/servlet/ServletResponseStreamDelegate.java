@@ -37,8 +37,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.ServletResponse;
 
 /**
  * A delegate for handling stream support in wrapped servlet responses.

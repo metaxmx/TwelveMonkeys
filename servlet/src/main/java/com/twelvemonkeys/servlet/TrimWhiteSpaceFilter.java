@@ -35,12 +35,12 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.ServletResponseWrapper;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.ServletResponseWrapper;
 
 /**
  * Removes extra unneccessary white space from a servlet response.

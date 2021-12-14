@@ -34,12 +34,12 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.twelvemonkeys.image.ImageUtil;
 import com.twelvemonkeys.lang.StringUtil;
@@ -49,7 +49,7 @@ import com.twelvemonkeys.servlet.GenericFilter;
  * Abstract base class for image filters. Automatically decoding and encoding of
  * the image is handled in the {@code doFilterImpl} method.
  *
- * @see #doFilter(java.awt.image.BufferedImage,javax.servlet.ServletRequest,ImageServletResponse)
+ * @see #doFilter(java.awt.image.BufferedImage,jakarta.servlet.ServletRequest,ImageServletResponse)
  *
  * @author <a href="mailto:harald.kuhr@gmail.com">Harald Kuhr</a>
  * @version $Id: ImageFilter.java#2 $
@@ -70,8 +70,8 @@ public abstract class ImageFilter extends GenericFilter {
      * {@link #oncePerRequest} member variable.
      *
      * @see #oncePerRequest
-     * @see com.twelvemonkeys.servlet.GenericFilter#doFilterImpl(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  doFilter
-     * @see Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  Filter.doFilter
+     * @see com.twelvemonkeys.servlet.GenericFilter#doFilterImpl(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  doFilter
+     * @see Filter#doFilter(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  Filter.doFilter
      *
      * @param pRequest the servlet request
      * @param pResponse the servlet response

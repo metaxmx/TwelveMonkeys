@@ -35,13 +35,13 @@ import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Enumeration;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 
 import com.twelvemonkeys.lang.BeanUtil;
 
@@ -68,7 +68,7 @@ import com.twelvemonkeys.lang.BeanUtil;
  * </p>
  * <p>
  * To write a generic filter, you need only override the abstract
- * {@link #doFilterImpl(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)}  doFilterImpl} method.
+ * {@link #doFilterImpl(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)}  doFilterImpl} method.
  * </p>
  *
  * @author <a href="mailto:harald.kuhr@gmail.com">Harald Kuhr</a>
@@ -159,7 +159,7 @@ public abstract class GenericFilter implements Filter, FilterConfig, Serializabl
      * @param pConfig the filter config
      * @throws ServletException if an error occurs during init
      *
-     * @see Filter#init(javax.servlet.FilterConfig)
+     * @see Filter#init(jakarta.servlet.FilterConfig)
      * @see #init() init
      * @see BeanUtil#configure(Object, java.util.Map, boolean)
      */
@@ -201,7 +201,7 @@ public abstract class GenericFilter implements Filter, FilterConfig, Serializabl
      * client request for a resource at the end of the chain.
      * <p>
      * Subclasses <em>should not override this method</em>, but rather the
-     * abstract {@link #doFilterImpl(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)}  doFilterImpl} method.
+     * abstract {@link #doFilterImpl(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)}  doFilterImpl} method.
      * </p>
      *
      * @param pRequest the servlet request
@@ -211,8 +211,8 @@ public abstract class GenericFilter implements Filter, FilterConfig, Serializabl
      * @throws IOException
      * @throws ServletException
      *
-     * @see Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  Filter.doFilter
-     * @see #doFilterImpl(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  doFilterImpl
+     * @see Filter#doFilter(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  Filter.doFilter
+     * @see #doFilterImpl(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  doFilterImpl
      */
     public final void doFilter(final ServletRequest pRequest, final ServletResponse pResponse, final FilterChain pFilterChain) throws IOException, ServletException {
         // If request filter and already run, continue chain and return fast
@@ -267,8 +267,8 @@ public abstract class GenericFilter implements Filter, FilterConfig, Serializabl
      * @throws ServletException if an exception occurs during the filter process
      *
      * @see #oncePerRequest
-     * @see #doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  doFilter
-     * @see Filter#doFilter(javax.servlet.ServletRequest, javax.servlet.ServletResponse, javax.servlet.FilterChain)  Filter.doFilter
+     * @see #doFilter(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  doFilter
+     * @see Filter#doFilter(jakarta.servlet.ServletRequest, jakarta.servlet.ServletResponse, jakarta.servlet.FilterChain)  Filter.doFilter
      */
     protected abstract void doFilterImpl(ServletRequest pRequest, ServletResponse pResponse, FilterChain pChain)
             throws IOException, ServletException;

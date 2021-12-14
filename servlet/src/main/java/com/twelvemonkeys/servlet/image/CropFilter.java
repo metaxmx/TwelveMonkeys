@@ -34,7 +34,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 
 import com.twelvemonkeys.servlet.ServletUtil;
 

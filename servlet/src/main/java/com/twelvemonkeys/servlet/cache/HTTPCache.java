@@ -35,8 +35,8 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.twelvemonkeys.io.FileUtil;
 import com.twelvemonkeys.lang.StringUtil;
@@ -239,7 +239,7 @@ public class HTTPCache {
      *                                  {@code pMaxMemCacheSize} or {@code pMaxCachedEntites} are
      *                                  negative,
      *                                  or if the directory as given in the context attribute
-     *                                  {@code "javax.servlet.context.tempdir"} does not exist, and
+     *                                  {@code "jakarta.servlet.context.tempdir"} does not exist, and
      *                                  cannot be created.
      */
     public HTTPCache(final File pTempFolder,
@@ -269,7 +269,7 @@ public class HTTPCache {
      *                                  {@code pMaxMemCacheSize} or {@code pMaxCachedEntites} are
      *                                  negative,
      *                                  or if the directory as given in the context attribute
-     *                                  {@code "javax.servlet.context.tempdir"} does not exist, and
+     *                                  {@code "jakarta.servlet.context.tempdir"} does not exist, and
      *                                  cannot be created.
      * @deprecated Use {@link #HTTPCache(File, long, int, int, boolean)} instead.
      */
@@ -289,9 +289,9 @@ public class HTTPCache {
         Validate.isTrue(!StringUtil.isEmpty(pName), pName, "empty name: '%s'");
         Validate.notNull(pContext, "context");
 
-        File tempRoot = (File) pContext.getAttribute("javax.servlet.context.tempdir");
+        File tempRoot = (File) pContext.getAttribute("jakarta.servlet.context.tempdir");
         if (tempRoot == null) {
-            throw new IllegalStateException("Missing context attribute \"javax.servlet.context.tempdir\"");
+            throw new IllegalStateException("Missing context attribute \"jakarta.servlet.context.tempdir\"");
         }
 
         return new File(tempRoot, pName);
@@ -1085,7 +1085,7 @@ public class HTTPCache {
      *
      * @param pHeaderValue the header value
      * @return the parsed date as a long, or {@code -1L} if not found
-     * @see javax.servlet.http.HttpServletRequest#getDateHeader(String)
+     * @see jakarta.servlet.http.HttpServletRequest#getDateHeader(String)
      */
     static long getDateHeader(final String pHeaderValue) {
         long date = -1L;

@@ -35,7 +35,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.lang.reflect.Field;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 
 import com.twelvemonkeys.image.ImageUtil;
 import com.twelvemonkeys.lang.StringUtil;

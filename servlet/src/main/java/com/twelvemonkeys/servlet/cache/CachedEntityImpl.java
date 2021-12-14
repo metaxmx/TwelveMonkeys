@@ -33,7 +33,7 @@ package com.twelvemonkeys.servlet.cache;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.twelvemonkeys.lang.Validate;
 

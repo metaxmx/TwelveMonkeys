@@ -34,7 +34,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 
-import javax.servlet.ServletResponse;
+import jakarta.servlet.ServletResponse;
 
 /**
  * ImageServletResponse.

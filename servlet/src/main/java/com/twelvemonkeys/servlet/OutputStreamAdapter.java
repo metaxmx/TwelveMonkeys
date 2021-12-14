@@ -33,9 +33,10 @@ package com.twelvemonkeys.servlet;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import javax.servlet.ServletOutputStream;
+import jakarta.servlet.ServletOutputStream;
 
 import com.twelvemonkeys.lang.Validate;
+import jakarta.servlet.WriteListener;
 
 /**
  * A {@code ServletOutputStream} implementation backed by a
@@ -123,5 +124,17 @@ public class OutputStreamAdapter extends ServletOutputStream {
     // Overide for efficiency
     public void write(final byte pBytes[], final int pOff, final int pLen) throws IOException {
         out.write(pBytes, pOff, pLen);
+    }
+
+    @Override
+    public boolean isReady() {
+        // Servlet 3.1
+        throw new UnsupportedOperationException("Not supported");
+    }
+
+    @Override
+    public void setWriteListener(WriteListener writeListener) {
+        // Servlet 3.1
+        throw new UnsupportedOperationException("Not supported");
     }
 }

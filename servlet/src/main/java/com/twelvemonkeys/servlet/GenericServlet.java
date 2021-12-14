@@ -32,8 +32,8 @@ package com.twelvemonkeys.servlet;
 
 import java.lang.reflect.InvocationTargetException;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
 
 import com.twelvemonkeys.lang.BeanUtil;
 
@@ -54,7 +54,7 @@ import com.twelvemonkeys.lang.BeanUtil;
  * @version $Id: GenericServlet.java#1 $
  */
 @Deprecated
-public abstract class GenericServlet extends javax.servlet.GenericServlet {
+public abstract class GenericServlet extends jakarta.servlet.GenericServlet {
     // TODO: Rewrite to use ServletConfigurator instead of BeanUtil
 
     /**
@@ -73,7 +73,7 @@ public abstract class GenericServlet extends javax.servlet.GenericServlet {
      * @param pConfig the servlet config
      * @throws ServletException if the servlet could not be initialized.
      *
-     * @see javax.servlet.GenericServlet#init
+     * @see jakarta.servlet.GenericServlet#init
      * @see #init() init
      * @see BeanUtil#configure(Object, java.util.Map, boolean)
      */

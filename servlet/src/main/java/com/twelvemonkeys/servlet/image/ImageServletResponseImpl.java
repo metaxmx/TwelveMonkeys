@@ -51,13 +51,13 @@ import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageInputStream;
 import javax.imageio.stream.ImageOutputStream;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponseWrapper;
 
 import com.twelvemonkeys.image.ImageUtil;
 import com.twelvemonkeys.io.FastByteArrayOutputStream;
@@ -129,8 +129,8 @@ class ImageServletResponseImpl extends HttpServletResponseWrapper implements Ima
      * @param pResponse the response
      * @param pContext the servlet context
      *
-     * @throws ClassCastException if {@code pRequest} is not an {@link javax.servlet.http.HttpServletRequest} or
-     *         {@code pResponse} is not an {@link javax.servlet.http.HttpServletResponse}.
+     * @throws ClassCastException if {@code pRequest} is not an {@link jakarta.servlet.http.HttpServletRequest} or
+     *         {@code pResponse} is not an {@link jakarta.servlet.http.HttpServletResponse}.
      */
     public ImageServletResponseImpl(final ServletRequest pRequest, final ServletResponse pResponse, final ServletContext pContext) {
         // Cheat for now...

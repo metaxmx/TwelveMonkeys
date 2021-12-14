@@ -33,7 +33,7 @@ package com.twelvemonkeys.servlet.image;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 
 /**
  * An {@code ImageFilter} that does nothing. Useful for debugging purposes.
